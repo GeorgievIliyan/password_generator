@@ -52,7 +52,7 @@ while True:
     user_input = int(input("Choose action: 1. Generate password, 2. Validate password, 3. Exit: "))
     if user_input == 1:
         length = int(input("Enter length: "))
-        etc = [a.lower() == "true" for a in input("Enter params: ").strip().split()]
+        etc = [a.lower() == "true" for a in input("Enter params (has_digits: bool, has_uppercase: bool, has_symbols: bool): ").strip().split()]
         password = generate_password(length, *etc)
         print(password)
         print("\033[31mYour password has been copied to your clipboard!\033[0m")
